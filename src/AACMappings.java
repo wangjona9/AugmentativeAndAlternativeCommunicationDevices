@@ -162,7 +162,6 @@ public class AACMappings {
    */
   public String getText(String imageLoc) {
     try {
-      System.out.println("Entering getText method for imageLoc: " + imageLoc);
 
       // Check if the image location corresponds to a category
       if (isCategory(imageLoc)) {
@@ -170,15 +169,12 @@ public class AACMappings {
         this.currentCategory = this.categories.get(imageLoc);
         return this.currentCategory.name;
       } else {
-        System.out.println("Checking if the key exists in the current category: " + imageLoc);
         // Check if the image location exists in the current category
         if (this.currentCategory.contents.hasKey(imageLoc)) {
-          System.out.println("Key found in the current category: " + imageLoc);
           // Return the text associated with the image location
           return this.currentCategory.contents.get(imageLoc);
         } else {
           // Handle case where imageLoc is not present in the current category
-          System.out.println("Image location not found in the current category: " + imageLoc);
           return imageLoc; // or return a default value
         }
       }
