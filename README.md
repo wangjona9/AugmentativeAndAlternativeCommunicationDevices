@@ -1,4 +1,4 @@
-# csc207-mp05
+# AugmentativeAndAlternativeCommunicationDevices
 
 Jonathan Wang
 
